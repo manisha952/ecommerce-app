@@ -1,0 +1,21 @@
+
+.vercel
+.env*.local
+
+
+# ignore env files
+.env
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+
+# editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
