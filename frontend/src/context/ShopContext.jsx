@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-// import { products } from "../assets/frontend_assets/assets";
+import { products } from "../assets/frontend_assets/assets";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"
 import axios from 'axios';
@@ -103,6 +103,8 @@ const ShopContextProvider = ({ children }) => {
     const getProductsData = async () => {
         try {
             const response = await axios.get(backendUrl + '/api/product/list')
+            console.log("Products fetched from backend:", response.data.products);
+
 
             if (response.data.success) {
                 setProducts(response.data.products)
